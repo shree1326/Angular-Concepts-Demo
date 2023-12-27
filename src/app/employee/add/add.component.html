@@ -1,0 +1,35 @@
+<div style="margin:50px;justify-content: center;display: flex;">
+<form class="formClass" [formGroup]="employeeForm" (ngSubmit)="addEmployee()">
+  <div class="divHead">
+      <div class="divBody">Full Name:</div>
+      <div class="divBody"> <input type="text" formControlName="name"></div>
+
+  </div>
+  <div class="divHead">
+    <div class="divBody">Email:</div>
+    <div class="divBody"><input type="email" formControlName="email"></div>
+  </div>
+  <div class="divHead">
+      <div class="divBody"> Department:</div>
+      <div class="divBody"> <input formControlName="department" type="text">
+      </div>
+  </div>
+  <div class="divHead">
+      <div class="divBody"> Designation:</div>
+      <div class="divBody"> <input formControlName="designation" type="text"></div>
+
+  </div>
+  <div class="divHead">
+      <div class="divBody"> Date of Birth:</div>
+      <div class="divBody"><input formControlName="birthDate" type="date">
+      </div>
+  </div>
+
+  <div class="divHead">
+      <div class="divBody"> Joining Date:</div>
+      <div class="divBody"><input formControlName="joiningDate" type="date">
+      </div>
+  </div>
+  <button [disabled]="!employeeForm.valid" type="submit">Submit</button>
+</form>
+</div>

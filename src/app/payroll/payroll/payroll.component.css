@@ -1,0 +1,20 @@
+.table-data {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    width: 100%;
+    height: 80%;
+
+  }
+
+.div-heading{
+    display: flex;
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 70%;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+  }

@@ -1,0 +1,41 @@
+<div class="home">
+  <h1>Payroll Data</h1>
+</div>
+<div class="div-heading">
+  <div style="float: left;width: 50%;">
+    <h3>List of Employees</h3>
+  </div>
+</div>
+&nbsp;
+<div class="table-data">
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Designation</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <th scope="row">{{employee.id}}</th>
+        <td>{{employee.name}}</td>
+        <td>{{employee.department}}</td>
+        <td>{{employee.designation}}</td>
+        <td>
+          <button class="btn btn-info" (click)="showAddPayrollData(employee)">View Payroll</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<div *ngIf="showAddPayroll">
+<app-calculate-payroll [employee]="employee" #viewChild></app-calculate-payroll>
+</div>
+<div >
+
+ 

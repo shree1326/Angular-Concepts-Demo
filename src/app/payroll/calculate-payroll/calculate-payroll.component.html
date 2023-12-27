@@ -1,0 +1,21 @@
+<form class="formClass" (ngSubmit)="addPayroll()">
+<h1>Payroll Data</h1>
+    <div class="divHead">
+      <div class="divBody"><label>Name of Employee:</label> </div>
+      <div class="divBody"> <input type="number" name="employeeId" [(ngModel)]="payroll.employeeId" readonly></div>
+    </div>
+    <div class="divHead">
+      <div class="divBody"><label>Select the Date:</label> </div>
+      <div class="divBody"> <input type="date"  (change)="daysInMonth(payroll.date)" name="date" [(ngModel)]="payroll.date"></div>
+    </div>
+    <div class="divHead">
+      <div class="divBody"><label>Total Days in a Month:</label> </div>
+      <div class="divBody"> <input type="number" name="dats" [(ngModel)]="payroll.workingDays" readonly></div>
+    </div>
+    <div class="divHead">
+      <div class="divBody"><label>Salary:</label> </div>
+      <div class="divBody"> {{payroll.workingDays | dailysal: '1100'}}</div>
+    </div>
+
+
+  </form>
